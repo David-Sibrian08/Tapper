@@ -24,6 +24,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(ViewController.didTapView))
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    func didTapView() {
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +53,14 @@ class ViewController: UIViewController {
             currentTaps = 0
             
             updateTapsLabel()
+        }
+        //provide an error message to the user
+        else {
+            let alertController = UIAlertController(title: "Invalid Value", message: "Taps must be > 0", preferredStyle: UIAlertControllerStyle.Alert)
             
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
     
