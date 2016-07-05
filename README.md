@@ -1,7 +1,8 @@
 # Tapper
+![alt tag](https://github.com/David-Sibrian08/Tapper/blob/master/Assets.xcassets/tapper.imageset/Tapper.png?raw=true)
+
 Simple iOS  tapping game meant to practice control and flow within an app
 
-![alt tag](https://github.com/David-Sibrian08/Tapper/blob/master/Assets.xcassets/tapper.imageset/Tapper.png?raw=true)
 Created by David Sibrian
 - - - -
 ## Rules
